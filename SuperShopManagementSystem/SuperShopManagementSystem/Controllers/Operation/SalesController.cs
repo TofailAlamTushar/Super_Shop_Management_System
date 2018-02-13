@@ -25,14 +25,12 @@ namespace SuperShopManagementSystem.Controllers.Operation
             List<Sale> Sales = saleBll.List();
             return View(Sales);
         }
-
         // GET: Items/Details/5
         public ActionResult Details(int id)
         {
             Sale sale = saleBll.GetById(id);
             return View(sale);
         }
-
         public ActionResult DetailsPdf(int id)
         {
             Sale sale = saleBll.GetById(id);
@@ -52,7 +50,6 @@ namespace SuperShopManagementSystem.Controllers.Operation
             ViewBag.ItemId = saleBll.GetItem();
             return View();
         }
-
         // POST: Items/Create
         [HttpPost]
         public ActionResult Create(Sale sale)

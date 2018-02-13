@@ -103,9 +103,8 @@
         </div>
     </div>
 </div>
-<div class="col-md-2">
-    @Html.ActionLink("Back to List", "List", "Purchases")
-</div>
-<div class="col-md-offset-8 col-md-2">
-    @Html.ActionLink("Go to Reports", "PurchaseReport", "Reports")
+<div class="col-md-offset-8 col-md-4">
+    @Html.ActionLink("Create New", "Create", "Purchases", new { @class = "btn btn-primary" })
+    @Html.ActionLink("Back to List", "List", "Purchases", new { @Class = "btn btn-primary" })
+    @Html.ActionLink("Go to Reports", "SalesReport", "Reports", null, new { @Class = "btn btn-info" })
 </div>

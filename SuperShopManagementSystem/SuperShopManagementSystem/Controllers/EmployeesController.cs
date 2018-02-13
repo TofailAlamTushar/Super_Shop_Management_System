@@ -20,11 +20,12 @@ namespace SuperShopManagementSystem.Controllers
             return View(Employees);
         }
 
-        // GET: Items/Details/5
-        //public ActionResult Details(int id)
-        //{
-        //    return View();
-        //}
+        //GET: Items/Details/5
+        public ActionResult Details(int id)
+        {
+            Employee employee = employeeBll.GetById(id);
+            return View(employee);
+        }
 
         // GET: Items/Create
         public ActionResult Create()

@@ -447,6 +447,7 @@
     <Content Include="Views\Reports\IncomeReportPdf.cshtml" />
     <Content Include="Views\Reports\StockReport.cshtml" />
     <Content Include="Views\Reports\StockReportPdf.cshtml" />
+    <Content Include="Views\Employees\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

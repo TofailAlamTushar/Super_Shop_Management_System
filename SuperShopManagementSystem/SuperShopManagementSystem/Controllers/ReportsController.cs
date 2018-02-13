@@ -130,7 +130,7 @@ namespace SuperShopManagementSystem.Controllers
             return new ActionAsPdf("IncomeReportPdf");
         }
 
-        //>>>Stpck report starts from here<<<
+        //>>>Stock report starts from here<<<
 
         public ActionResult StockReport()
         {

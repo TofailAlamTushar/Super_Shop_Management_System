@@ -38,8 +38,6 @@
                 <dd>
                     @Html.DisplayFor(model => model.ExpenseDate)
                 </dd>
-
-
             </dl>
             <div class="col-md-12">
                 <h4>Expense Item Details</h4>
@@ -89,9 +87,8 @@
         </div>
     </div>
 </div>
-<div class="col-md-2">
-    @Html.ActionLink("Back to List", "List", "Expenses")
-</div>
-<div class="col-md-offset-8 col-md-2">
-    @Html.ActionLink("Go to Reports", "Expense", "Reports")
+<div class="col-md-offset-8 col-md-4">
+    @Html.ActionLink("Create New", "Create", "Expenses", new { @class = "btn btn-primary" })
+    @Html.ActionLink("Back to List", "List", "Expenses", new { @Class = "btn btn-primary" })
+    @Html.ActionLink("Go to Reports", "SalesReport", "Reports", null, new { @Class = "btn btn-info" })
 </div>

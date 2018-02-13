@@ -3,11 +3,10 @@
 @{
     ViewBag.Title = "Create";
 }
-
     @using (Html.BeginForm())
     {
         @Html.AntiForgeryToken()
-    
+    <div id="bindValue"></div>
     <div class="form-horizontal">
         <h4>Add Sale Here</h4>
         <hr />
@@ -21,21 +20,21 @@
                 </div>
             </div>
             <div class="form-group">
-                @Html.Label("ItemQuntity", htmlAttributes: new { @class = "control-label col-md-2" })
+                @Html.Label("ItemQuntity","Item Quantity", htmlAttributes: new { @class = "control-label col-md-2" })
                 <div class="col-md-8">
-                    @Html.Editor("ItemQuntity", new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.Editor("ItemQuntity", new { htmlAttributes = new {Id= "ItemQuntity", @class = "form-control" } })
                     @Html.ValidationMessage("ItemQuntity", "", new { @class = "text-danger" })
                 </div>
             </div>
             <div class="form-group">
-                @Html.Label("ItemPrice", htmlAttributes: new { @class = "control-label col-md-2" })
+                @Html.Label("ItemPrice","Item Price", htmlAttributes: new { @class = "control-label col-md-2" })
                 <div class="col-md-8">
                     @Html.Editor("ItemPrice", new { htmlAttributes = new { @class = "form-control" } })
                     @Html.ValidationMessage("ItemPrice", "", new { @class = "text-danger" })
                 </div>
             </div>
             <div class="form-group">
-                @Html.Label("ItemStockQuantity", htmlAttributes: new { @class = "control-label col-md-2" })
+                @Html.Label("ItemStockQuantity","Stock Quaantity", htmlAttributes: new { @class = "control-label col-md-2" })
                 <div class="col-md-8">
                     @Html.Editor("ItemStockQuantity", new { htmlAttributes = new { Id = "Stock", @class = "form-control" } })
                     @Html.ValidationMessage("ItemStockQuantity", "", new { @class = "text-danger" })
@@ -148,7 +147,7 @@
             </div>
             <div class="form-group">
                 <div class="col-md-offset-2 col-md-8">
-                    <input type="submit" value="Save" class="btn btn-success" />
+                    <input id="btnSubmit" type="submit" value="Save" class="btn btn-success" />
                 </div>
             </div>
         </div>
