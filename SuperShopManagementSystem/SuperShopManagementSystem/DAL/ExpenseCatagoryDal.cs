@@ -13,7 +13,8 @@ namespace SuperShopManagementSystem.DAL
     {
         ShopDbContext db = new ShopDbContext();
         bool status = false;
-        
+        int start = 0;
+
         public bool Create(ExpenseCatagory expenseCatagory)
         {
 
@@ -61,10 +62,15 @@ namespace SuperShopManagementSystem.DAL
            string autoCode = "";
            string lastCode = db.ExpenseCatagories.Max(item => item.Code);
 
-            string resultString = Regex.Match(lastCode, @"\d+").Value;
-            int start = Int32.Parse(resultString);
+            if (lastCode != null)
+            {
+                string resultString = Regex.Match(lastCode, @"\d+").Value;
+                start = Int32.Parse(resultString);
 
-            autoCode = "EC" + (start+1).ToString("000");         
+                autoCode = "EC" + (start + 1).ToString("000");
+            }
+            autoCode = "EC" + (start + 1).ToString("000");
+         
             return autoCode;
         }
 
